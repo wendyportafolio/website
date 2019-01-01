@@ -49,11 +49,11 @@ body{
 		-webkit-transform: perspective(120px);
 	}
 
-	25% {
+	50% {
 		-webkit-transform: perspective(120px) rotateY(180deg);
 	}
 
-	50% {
+	100% {
 		-webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
 	}
 
@@ -65,12 +65,12 @@ body{
 		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
 	}
 
-	30% {
+	50% {
 		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
 		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
 	}
 
-	60% {
+	100% {
 		-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
 		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
 	}
