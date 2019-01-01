@@ -1,0 +1,613 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	/*background: #036;*/ /*url(../images/jpg/patternbg.jpg) 0 0 repeat;*/
+	background-image: url(../images/jpg/Old_intheNew.jpg);
+	background-position: center;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+header{
+	background: #2f3133 url(../images/jpg/patternbg.jpg) 0 0 repeat;
+	max-width: 1000px;
+	min-height: 175px;
+	margin: 0 auto; /*corresponde margen externo y el atributo auto centra el bloque*/
+}
+
+#horizon-menu{
+	background: #545658;
+	max-width: 1000px;
+	/*min-height: 77.600px;*/ /*Para que tome el tamaño del menu insertado*/
+	margin: 0 auto;
+}
+
+#banner{
+	background: #2f3133 url(../images/jpg/patternbg.jpg) 0 0 repeat;
+	max-width: 1000px;
+	/*min-height: 450px;*/ /*minimo de altura del bloque, si el contenido es mayor el bloque cede*/
+	/*Cuando no hay altura y hay algo adentro de la caja, ésta toma la forma de la imagen*/
+	margin: 0 auto; /*corresponde margen externo y el atributo auto centra el bloque*/
+	animation: 1s bannerentry 1;	
+}
+
+#banner img{
+	max-width: 100%; /*Porcentaje respecto al contenedor*/
+	min-height: 100%;
+}
+
+#container{
+	background: #2f3133 url(../images/jpg/patternbg.jpg) 0 0 repeat;
+	max-width: 1000px;
+	min-height: 350px;
+	margin: 0 auto; /*corresponde margen externo y el atributo auto centra el bloque*/
+}
+
+
+#container_2{
+	/*background: #C0C0C0;*/
+	background: #2f3133 url(../images/jpg/patternbg.jpg) 0 0 repeat;
+	max-width: 1000px;
+	min-height: 350px;
+	margin: 0 auto; /*corresponde margen externo y el atributo auto centra el bloque*/
+}
+
+#container_arqui{
+	background: #ffffff;
+	max-width: 1000px;
+	min-height: 6500px;
+	margin: 0 auto; /*corresponde margen externo y el atributo auto centra el bloque*/
+	/*overflow: hidden;*/
+}
+
+#container_visual{
+	background: #ffffff;
+	max-width: 1000px;
+	min-height: 2000px;
+	margin: 0 auto; /*corresponde margen externo y el atributo auto centra el bloque*/
+}
+
+/*-----------------------------------------CLASSES----------------------------------------*/
+/*.class-fade-in{
+	animation: 1s fadein 1;
+}*/
+
+
+/*.class-image{
+	max-width: 100%; 
+	min-height: 100%; } /*Responsive para imagen, ambos son necesarios*/
+
+/*-----------------------------------------CLASSES----------------------------------------*/
+
+/*-------------------------------------------KEY FRAMES--------------------------------------*/
+/*La animación del body se la metemos a nivel html con la clase: class-fade-in*/
+@keyframes fadein{
+	0%{
+	opacity: 0;
+}
+}
+
+/*La animación del logo se la metemos en su etiqueta #logo*/
+@keyframes logoentry{
+	0%{
+		opacity: 0;
+		transform: translateY(-200px);
+}
+	30%{
+		transform: rotateY(180deg);
+}
+}
+/*La animación del banner se la metemos en su etiqueta #banner*/
+@keyframes bannerentry{
+	0%{
+	opacity: 0;
+	transform: scale(0);
+}
+}
+/*-------------------------------------------KEY FRAMES--------------------------------------*/
+
+
+/*------------------------------------PANTALLA DE ESCRITORIO----------------------------------*/
+@media screen and (min-width: 1200px)
+{
+	.class-body{
+	animation: 1s fadein 1;
+	}
+
+	#logo{
+	padding: 40px 0 0 0; /*Me jode la animación, es mejor aplicar text-align*/
+	animation: 2s logoentry 1;
+	text-align:center;
+	/*float left; sirve para que el logo flote a la izquierda y la animación se vea bien*/
+	}
+
+	#logo img{  /*Aplicar responsive siempre a nivel de la imagen*/
+	max-width:100%;  /*Porcentaje respecto al contenedor*/
+	min-height:100%;
+	}
+
+	#title{
+	padding: 45px 0 0 0;
+	text-align: center;
+	color: #ffffff;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: normal;
+   	margin-bottom: 24px;   	
+	}
+
+	#text_1{
+	padding: 30px 42px 10px 42px;
+	text-align: center;
+	letter-spacing: 0;
+    color: #939598;
+    font-family: 'Georgia', serif;
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: normal;
+	}
+
+	#left{
+	max-width: 500px;
+	min-height: 250px;
+	/*background: #AFEEEE;*/ /*Color celeste*/
+	background: #FFDEAD;	/*Color melón*/
+	color: #000000;
+	font-family: 'Georgia', serif;
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0px 0 0 0px;
+	/*padding: 0 0 0 0;*/
+	text-align: center;
+	float: left;
+    line-height: 35px;
+   	}
+
+   	#maqueta_img{
+   		max-width: 500px;
+		height:  250px;
+   		margin: 0px 0 0 0;
+   	}
+
+  	#right{
+	max-width: 500px;
+	min-height: 250px;
+	background: #FFDEAD;
+	color: #000000;
+	font-family: 'Georgia', serif;
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0px 0px 0 0;
+	/*padding: 10px 0 0px 0;*/
+	text-align: center;
+	float: right;
+    line-height: 35px;
+	}
+
+	#creacion_img{
+   	max-width: 500px;
+	height:  250px;
+   	margin: 0px 0 0 0;
+   	}
+
+	#title_arqui{
+	background: #C0C0C0;
+	padding: 10px 0 5px 0;
+	text-align: center;
+	color: #000000;
+	font-family: 'Georgia', serif;
+    font-size: 20px;
+   /* line-height: 38px;*/
+    font-weight: normal;
+   	margin-bottom: 8px;   	
+	}
+
+	#text1_arqui{
+	background: #ffffff;
+	padding: 5px 100px 5px 100px;
+	text-align: justify;
+	letter-spacing: 0;
+    color: #000000;
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: normal;
+	}
+
+	#img_arqui{
+		text-align: center;
+	}
+
+	#img_arqui_2{
+	width: 350px;
+	height: 615px;
+	float: left;
+	margin: 0 0 20px 135px;
+	}
+
+	#img_arqui_3{
+	width: 350px;
+	height: 615px;
+	float: right;
+	margin: 70px 90px 20px 0;
+	}
+
+	#img_arqui_4{
+	width: 320px;
+	height: 320px;
+	float: left;
+	margin: 20px 0 0 170px;
+	}
+
+	#img_arqui_5{
+	width: 350px;
+	height: 320px;
+	float: right;
+	margin: 20px 90px 0 70px;
+	}
+
+	#img_arqui_6{
+	width: 350px;
+	height: 320px;
+	float: left;
+	margin: 5px 0 10px 90px;
+	}
+
+	#img_arqui_7{
+	width: 350px;
+	height: 320px;
+	float: right;
+	margin: 5px 130px 10px 0;
+	}
+
+	#img_arqui_8{
+	width: 350px;
+	height: 365px;
+	float: left;
+	margin: 5px 0 30px 170px;
+	}
+
+	#img_arqui_9{
+	width: 350px;
+	height: 365px;
+	float: right;
+	margin: 5px 70px 30px 0;
+	}
+
+	#img_arqui_10{
+	width: 350px;
+	height: 320px;
+	float: left;
+	margin: 5px 0 10px 90px;
+	}
+
+	#img_arqui_11{
+	width: 350px;
+	height: 320px;
+	float: right;
+	margin: 5px 130px 10px 0;
+	}
+
+	#img_arqui_12{
+	width: 300px;
+	height: 365px;
+	float: left;
+	margin: 5px 0 60px 150px;
+	}
+
+	#img_arqui_13{
+	width: 350px;
+	height: 320px;
+	float: right;
+	margin: 30px 180px 80px 0;
+	}
+
+	#img_arqui_14{
+	text-align: center;
+	}
+
+	#img_arqui_14 img{
+	text-align: center;
+	padding: 0px 0 10px 0;
+	}
+	
+	#foot{
+	background: #2f3133 url(../images/jpg/patternbg.jpg) 0 0 repeat;
+	max-width: 1000px;
+	min-height: 180px;
+	margin: 0 auto;
+	padding: 65px 0 0 0;
+	text-align: center; /*Esta propiedad centra textos e imagenes*/
+	letter-spacing: 0;
+    color: #FFF;
+	font-family: 'Georgia', serif;
+	font-size: 15px;
+	font-weight: normal;	
+}
+
+
+}
+/*------------------------------------PANTALLA DE ESCRITORIO----------------------------------*/
+
+
+
+/*------------------------------------PANTALLA DE SMARTPHONE----------------------------------*/
+@media screen and (max-width: 1200px)
+{
+
+	.class-body{
+	margin: 0;
+	/*animation: 1s fadein 1;*/
+	}
+
+	#logo{
+	padding: 55px 0 0 0; /*Me jode la animación, es mejor aplicar text-align*/
+	animation: 2s logoentry 1;
+	text-align:center;
+	/*float left; sirve para que el logo flote a la izquierda y la animación se vea bien*/
+	}
+
+	#logo img{  /*Aplicar responsive siempre a nivel de la imagen*/
+	max-width: 100%;  /*Porcentaje respecto al contenedor*/
+	min-height:100%;
+	}
+
+	#title{
+	padding: 45px 0 0 0;
+	text-align: center;
+	color: #ffffff;
+    font-family: 'Georgia', serif;
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: normal;
+   	margin-bottom: 24px;   	 	
+ 	}
+
+	#text_1{
+	padding: 20px 42px 42px 42px;
+	text-align: center;
+	letter-spacing: 0;
+    color: #939598;
+    font-family: 'Georgia', serif;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: normal;
+
+}
+ 	#left{
+ 	max-width: 500px;
+	min-height: 150px;
+ 	background: #FFDEAD;
+	color: #000000;
+	font-family: 'Georgia', serif;
+	font-size: 8px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-align: center;
+	line-height: 15px;
+	/*float:left;*/
+	margin: 0 auto;
+	zoom: 1.9;
+	}
+
+	#right{
+	max-width: 500px;
+	min-height: 150px;
+	background: #FFDEAD;
+	color: #000000;
+	font-family: 'Georgia', serif;
+	font-size: 8px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-align: center;
+    line-height: 15px;
+    /*float: right;*/
+    margin: 0 auto;
+    zoom: 1.9;
+	}
+
+	
+	#maqueta_img{
+	background: #2f3133 url(../images/jpg/patternbg.jpg) 0 0 repeat;
+	max-width: 500px;
+	min-height:  150px;
+	}
+
+	#creacion_img{
+	background: #2f3133 url(../images/jpg/patternbg.jpg) 0 0 repeat;
+   	max-width: 500px;
+	min-height:  150px;
+   	}
+
+
+	#maqueta_img img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	
+	#creacion_img img{
+	max-width:100%;  
+	min-height:100%;
+	}
+
+	#title_arqui{
+	background: #C0C0C0;
+	padding: 5px 0 0 0;
+	text-align: center;
+	color: #000000;
+	font-family: 'Georgia', serif;
+    font-size: 16px;
+    /*line-height: 38px;*/
+    font-weight: normal;
+   	margin-bottom: 4px;   	
+	}
+
+	#text1_arqui{
+	background:#ffffff;
+	padding: 5px 25px 5px 25px;
+	text-align: justify;
+	letter-spacing: 0;
+    color: #000000;
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: normal;
+	}
+
+	#img_arqui{
+		text-align: center;
+		padding: 0 25px 0 25px;
+	}
+
+	#img_arqui img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_2 {
+	text-align: center;
+	}
+
+	#img_arqui_3 {
+	text-align: center;
+	}
+	
+	#img_arqui_2 img{
+	max-width:65%; 
+	min-height:65%;
+	}
+
+	#img_arqui_3 img{
+	max-width:65%; 
+	min-height:65%;
+	}
+
+	#img_arqui_4 {
+	text-align: center;
+	}
+
+	#img_arqui_5 {
+	text-align: center;
+	}
+
+	#img_arqui_4 img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_5 img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_6 {
+	padding: 5px 0 20px 0;
+	text-align: center;
+	}
+
+	#img_arqui_7 {
+	padding: 0 0 5px 0;
+	text-align: center;
+	}
+
+	#img_arqui_6 img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_7 img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_8 {
+	text-align: center;
+	padding: 0 0 20px 0;
+	}
+
+	#img_arqui_9 {
+	text-align: center;
+	padding: 0 0 20px 0;
+	}
+
+	#img_arqui_8 img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_9 img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_10 {
+	padding: 5px 0 20px 0;
+	text-align: center;
+	}
+
+	#img_arqui_11 {
+	padding: 0 0 5px 0;
+	text-align: center;
+	}
+
+	#img_arqui_10 img{
+	max-width:75%; 
+	min-height:75%;
+	}
+
+	#img_arqui_11 img{
+	max-width:75%; 
+	min-height:75%;
+	}
+
+
+	#img_arqui_12 {
+	text-align: center;
+	padding: 0 0 20px 0;
+	}
+
+	#img_arqui_13 {
+	text-align: center;
+	padding: 0 0 5px 15px;
+	}
+
+	#img_arqui_12 img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_13 img{
+	max-width:100%; 
+	min-height:100%;
+	}
+
+	#img_arqui_14 {
+	text-align: center;
+	/*padding: 0 0 5px 15px;*/
+	}
+
+	#img_arqui_14 img{
+	max-width:90%; 
+	min-height:90%;
+	}
+
+	#foot{
+	background: #2f3133 url(../images/jpg/patternbg.jpg) 0 0 repeat;
+	max-width: 1000px;
+	min-height: 100px;
+	margin: 0 auto;
+	padding: 50px 0 0 0;
+	text-align: center; /*Esta propiedad centra textos e imagenes*/
+	letter-spacing: 0;
+    color: #FFF;
+	font-family: 'Georgia', serif;
+	font-size: 12px;
+	font-weight: normal;	
+}
+
+}
+/*------------------------------------PANTALLA DE SMARTPHONE----------------------------------*/
+
