@@ -13,16 +13,37 @@
 
 	<!--+++++++++++++++++++ MENU HORIZONTAL ++++++++++++++-->
 	<link rel="stylesheet" type="text/css" href="css/menu_style.css">
-	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery-latest.min.js"></script> -->
 	<script type="text/javascript" src="js/script.js"></script>
 	<!--+++++++++++++++++++ MENU HORIZONTAL ++++++++++++++-->
 
 	<!-- BOTON ARRIBA HEAD--> <!--Siempre pegar antes de las anclas deslizantes / Esto genera el efecto-->
     <!--Su hoja de estilos es arriba.css-->
         <link rel="stylesheet" href="css/arriba.css">
-        <!-- <script src="js/jquery-latest.min.js"></script> -->
+        <script src="js/jquery-latest.min.js"></script>
         <script src="js/arriba.js"></script>
 	<!-- BOTON ARRIBA HEAD-->
+
+	<!-- anclas deslizantes -->
+		<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="js/stickyMojo.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {	
+
+			$('#cssmenu').stickyMojo({footerID: '#footer', contentID: '#content'});
+
+			$('.ancla').click(function(){
+				var link = $(this);
+				var anchor  = link.attr('href');
+				$('html, body').stop().animate({
+					scrollTop: jQuery(anchor).offset().top
+				}, 1000);
+				return false;
+			});
+		});
+		</script>
+ <!-- anclas deslizantes --> 
+
 
 </head>
 
@@ -55,10 +76,10 @@
 			<ul>
 				
 				<li><a href="index.html">Home </a></li>
-				<li><a href="#title">About me</a> <!-- Class has-sub para adicionar icono submenu -->
+				<li><a href="#title" class="ancla">About me</a> <!-- Class has-sub para adicionar icono submenu -->
 				<li><a href="arquitectura.html">Architecture</a></li>
 				<li><a href="visual.html">Visual Merchandising</a></li>
-				<li><a href="#foot">Contact</a></li>
+				<li><a href="#foot" class="ancla">Contact</a></li>
 				<!-- <li><a>Links</a></li> -->
 			</ul>
 
